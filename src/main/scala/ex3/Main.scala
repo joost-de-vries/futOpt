@@ -21,6 +21,4 @@ object Main extends App {
     } yield ab
     result.run
   }
-
-
 }

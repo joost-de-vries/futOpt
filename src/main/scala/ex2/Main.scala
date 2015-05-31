@@ -12,7 +12,7 @@ object Main extends App {
   //let's make a Future[Option[A]] flatmappable over A so we can use a for comprehension
   case class FutureOpt[A](val futOpt: Future[Option[A]]) {
 
-    def flatMap[B](f: A => FutureOpt[B]): FutureOpt[B] = FutureOpt(
+    def flatMap[B](f: A => FutureOpt[B]): FutureOpt[B] = FutureOpt(  //  Future[Option[B]]
       futOpt flatMap {
         case Some(a) => f(a).futOpt
         case None => Future.successful(None)
