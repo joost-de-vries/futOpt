@@ -18,7 +18,5 @@ object Helloify {
   def helloify(user: User): Future[Option[String]] = Future(
     if (user.friendly) Some("hello " + user.name) else None
   )
-
-
 }
 

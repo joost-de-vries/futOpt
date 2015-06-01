@@ -8,7 +8,6 @@ import scala.concurrent.Future
 
 object Main extends App {
 
-  //that becomes somewhat cumbersom when we have more than 2 function calls.
   //let's make a Future[Option[A]] flatmappable over A so we can use a for comprehension
   case class FutureOpt[A](val futOpt: Future[Option[A]]) {
 

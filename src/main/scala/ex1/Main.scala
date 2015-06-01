@@ -8,7 +8,6 @@ import scala.concurrent.Future
 
 object Main extends App {
 
-  //let's offer to our clients a combined function that looks up the user and returns the greeting
   def helloifyUser(userid: Int): Future[Option[String]] = {
 
     findUser(userid) flatMap {
